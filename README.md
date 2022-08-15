@@ -13,27 +13,24 @@ Navigation of Files:
 
 	Pipeline of GeneralDay.m
 
-	First it converts the nd2 image to png image using the nd2read function: 
+	a. First it converts the nd2 image to png image using the nd2read function: 
 
 
 <img src='Development_Scripts/pngimage.png' width='250'>
 
 
-		Second it convertes the image to bw.
+	b. Second it convertes the image to bw.
 
 <img src='Development_Scripts/bwimage.png' width='250'>	
 		
-		Third it segments the bw image (red circles denote found EBs using the current settings (range and sensitivity) and scan)
+	c. Third it segments the bw image (red circles denote found EBs using the current settings (range and sensitivity) and scan)
 		
 <img src='Development_Scripts/segmentedbw.png' width='250'>
 
-		Finally, it will calculate the circularity scores and the boundary color of the EBs denote the circularity score for both bw and color - heatmap is provided to the side. 
+	d. Finally, it will calculate the circularity scores and the boundary color of the EBs denote the circularity score for both bw and color - heatmap is provided to the side. 
 		
 
-<img src='Development_Scripts/colormappedbw.png' width='250'>
-
-
-<img src='Development_Scripts/colormappedcolor.png' width='250'>
+<img src='Development_Scripts/colormappedbw.png' width='250'> <img src='Development_Scripts/colormappedcolor.png' width='250'>
 
 
 
