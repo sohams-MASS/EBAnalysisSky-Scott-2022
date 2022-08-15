@@ -13,9 +13,9 @@ Navigation of Files:
 
 	Pipeline of GeneralDay.m
 
-		First it converts the nd2 image to png image using the nd2read function: 
+	First it converts the nd2 image to png image using the nd2read function: 
 
-		![PNG Image of EBs] (pngimage.png)
+	![PNG Image of EBs] (pngimage.png)
 
 		Second it convertes the image to bw.
 
