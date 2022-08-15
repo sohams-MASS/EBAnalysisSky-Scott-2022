@@ -72,7 +72,7 @@ Navigation of Files:
 
 	```
 
-2. **ViolinPlotter.m** operates on text files generated from GeneralDay to plot ViolinPlots - based on  2016, Bastian Bechtold Violin.m code. Violin Plotter Generates violin plots of data of both circularity and diameter of EBs. 
+2. **ViolinPlotter.m** operates on text files generated from GeneralDay to plot ViolinPlots - based on modifying Bastian Bechtold Violin.m code. Violin Plotter Generates violin plots of data of both circularity and diameter of EBs. Example is given below:
 	
 	<img src='Development_Scripts/N56.1 Circularity Ratio.png' width='400'><img src='Development_Scripts/N56.1 Diameter Sizes.png' width='400'>
 
