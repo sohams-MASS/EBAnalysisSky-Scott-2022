@@ -15,11 +15,11 @@ Navigation of Files:
 
 	First it converts the nd2 image to png image using the nd2read function: 
 
-![PNG Image of EBs]('Development_Scripts/pngimage.png')
+![PNG Image of EBs]('/Development_Scripts/pngimage.png')
 
 		Second it convertes the image to bw.
 
-![BW Image of EB]('Development_Scripts/bwimage.png')	
+![BW Image of EB]('/Development_Scripts/bwimage.png')	
 		
 		Third it segments the bw image (red circles denote found EBs using the current settings (range and sensitivity) and scan)
 		
@@ -27,7 +27,7 @@ Navigation of Files:
 
 		Finally, it will calculate the circularity scores and the boundary color of the EBs denote the circularity score for both bw and color - heatmap is provided to the side. 
 		
-![Colormapped BW Image]('Development_Scripts/colormappedbw.png')
+![Colormapped BW Image]('/Development_Scripts/colormappedbw.png')
 
 ![Colormappped Original Image]('Extraneous and Development_Scripts/colormappedcolor.png')
 
