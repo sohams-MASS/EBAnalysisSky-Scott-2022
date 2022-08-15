@@ -9,6 +9,13 @@ Navigation of Files:
 
 1. GeneralDay.m operates on nd2 images directly existing in a directory. It scans the directory for all nd2 images, and analyses the images based on the settings provided. 
 
+Relevant Helper Functions: nd2info.m and nd2read.m (Citation: Chao-Yen Yuh’s nd2read (https://github.com/joe-of-all-trades/nd2read))
+
+
+
+
+
+
 Relevant Function Details are provided in the file description: 
 
 Reproduced here for clarity:
@@ -48,6 +55,10 @@ function GeneralDay(LL, range, sensitivity)
 
 ```
 
-2. ViolinPlotter.m operates on text files generated from GeneralDay to plot ViolinPlots - based on  2016, Bastian Bechtold Violin.m code. 
+2. ViolinPlotter.m operates on text files generated from GeneralDay to plot ViolinPlots - based on  2016, Bastian Bechtold Violin.m code. Violin Plotter Generates violin plots of data of both circularity and diameter of EBs. 
 
-If you find any of the code useful, please cite the relevant paper Ho et. Al. 
+Relevant Helper Functions Violin.m and violinplot.m (Citation: Bechtold, Bastian, 2016. https://github.com/bastibe/Violinplot-Matlab, DOI: 10.5281/zenodo.4559847)
+
+3. Extraneous and Development Scripts contain scripts that were used during development of above code. It is not recommended to use these scripts, but placed here for full clarity and development. 
+
+If you want to cite this repository, please cite the relevant paper.
