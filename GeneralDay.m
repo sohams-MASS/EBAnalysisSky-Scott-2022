@@ -1,3 +1,37 @@
+function GeneralDay(LL, range, sensitivity)
+%%%LL responds to which scan your doing of the files (1st, 2nd, or 3rd)
+%%%Range is the sizes of EBs that you are searching for in pixel diameters - is a 2x1 vector with
+%%%[smallest_diameter largest_diameter];
+%%%Sensitivity (0-1) s a hyperparameter for choosing for which EB to select for
+%%%(higher sensitivities are needed for bigger EBs)
+%%% Recommendations for Range and Sensitivity
+
+%Start with [20 200], 0.72
+%Then with [40 200] 0.76
+%Then with [60 200] 0.80
+%Then [80 200] 0.88
+%Then with [90 200] with 0.92
+
+%Naming Conventions is based on the File Name given. 
+
+%Function will show analysis of images as they happen. 
+%Key outputs 
+%1. BW Image [Image Name will be appended with BW.png]
+%2. Color Image [Image Name will be appended with color.png]
+%3. Segmented BW Image [Image Name will be appended with clean.png]
+%4. Segmented BW Image with Circularity Map [Image Name will be appended with colormappedBW.png]
+%5. Segmented Color Image with Circularity Bars [Image Name will be appended with colormapped.png]
+%6. Text file with the following format of the columns of the numbers of
+%identified EBs
+%[Center_x Center_y Diameter Circularity]
+%7. Function will ask you which Day and Run (N) you are analysing - and use
+%these to output a text file with all EB diameters and circularity scores.
+%The diameter text file will have name of (Run)_(Day).txt.
+%The circularity text file will have name of (Run)_(Day)circle.txt.
+%Function will remove any repeats as necessary per increasing scan of
+%image. 
+
+
 clear
 currentdir = dir([pwd '/*.nd2']);
 currentdirc = struct2table(currentdir);
@@ -7,7 +41,6 @@ for i =1: len
     filenamec = table2array(currentdirc(i,1));
     %filename =filenamec{1};
     filename = filenamec{1};
-        LL = 2;
         %filename = filenamec;
     [convertedImage,~,~] = nd2read(filename);
     %imshow(convertedImage);
@@ -32,8 +65,8 @@ for i =1: len
         %Then with 90-200 with 0.92
             figure(2); imshow(ibw);
             
-            [centersm,radiim,metric]=imfindcircles(ibw,[60 500], 'ObjectPolarity', 'dark',...
-                'Sensitivity',0.86, 'Method', 'TwoStage', 'EdgeThreshold', 0);
+            [centersm,radiim,metric]=imfindcircles(ibw,range, 'ObjectPolarity', 'dark',...
+                'Sensitivity',sensitivity, 'Method', 'TwoStage', 'EdgeThreshold', 0);
             
             
             
@@ -278,7 +311,7 @@ writematrix(total, newfilename);
 newfilename2 = ['N' num2str(N) ' Day' num2str(D) 'circle.txt'];
 writematrix(totalc,newfilename2);
 
-
+end
 
 
 
