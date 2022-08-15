@@ -11,21 +11,21 @@ Navigation of Files:
 
 	Relevant Helper Functions: nd2info.m and nd2read.m (Citation: Chao-Yen Yuh’s nd2read (https://github.com/joe-of-all-trades/nd2read))
 
-	-Pipeline of GeneralDay.m
+	Pipeline of GeneralDay.m
 
-		-First it converts the nd2 image to png image using the nd2read function: 
+		First it converts the nd2 image to png image using the nd2read function: 
 
 		![PNG Image of EBs] (pngimage.png)
 
-		-Second it convertes the image to bw.
+		Second it convertes the image to bw.
 
 		![BW Image of EB] (bwimage.png)	
 		
-		-Third it segments the bw image (red circles denote found EBs using the current settings (range and sensitivity) and scan)
+		Third it segments the bw image (red circles denote found EBs using the current settings (range and sensitivity) and scan)
 		
 		![Segmented BW Image] (segmentedbw.png)
 
-		-Finally, it will calculate the circularity scores and the boundary color of the EBs denote the circularity score for both bw and color - heatmap is provided to the side. 
+		Finally, it will calculate the circularity scores and the boundary color of the EBs denote the circularity score for both bw and color - heatmap is provided to the side. 
 		
 		![Colormapped BW Image] (colormappedbw.png)
 
