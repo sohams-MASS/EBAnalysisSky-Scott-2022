@@ -19,7 +19,7 @@ Navigation of Files:
 
 		Second it convertes the image to bw.
 
-![BW Image of EB]('/Development_Scripts/bwimage.png')	
+![BW Image of EB]('./bwimage.png')	
 		
 		Third it segments the bw image (red circles denote found EBs using the current settings (range and sensitivity) and scan)
 		
@@ -29,7 +29,7 @@ Navigation of Files:
 		
 ![Colormapped BW Image]('Development_Scripts/colormappedbw.png')
 
-![Colormappped Original Image]('Extraneous and Development_Scripts/colormappedcolor.png')
+![Colormappped Original Image]('Development_Scripts/colormappedcolor.png')
 
 
 
