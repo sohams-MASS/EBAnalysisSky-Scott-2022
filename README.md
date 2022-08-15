@@ -31,6 +31,7 @@ Navigation of Files:
 		
 	<img src='Development_Scripts/colormappedbw.png' width='300'> <img src='Development_Scripts/colormappedcolor.png' width='300'>
 
+	Rescan with different settings to capture other remaining EBs, as necessary. 
 
 	Relevant Function Details are provided in the file description but also reproduced here: 
 
