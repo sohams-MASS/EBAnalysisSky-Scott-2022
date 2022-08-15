@@ -1,5 +1,9 @@
 Code for Visual Analysis for EB Images. 
 
+Supplementary Info for "Optimizing embryoid body culture in an automated bioreactor for the large-scale production of wholly-cellular bioinks" 
+Authors: Debbie L. L. Ho, Stacey Lee, Jianyi Du, Tony Tam, Soham Sinha, Sean Devine, Art Hamfeldt, Jonathan D. Weiss, Hope T. Leng, Danielle Klinger, Mengdi He, Donald Traul, Quentin Vicard, Kishore Katikireddy, Mark A. Skylar-Scott1
+
+Code Maintenance: Soham Sinha (sohams@stanford.edu)
 
 Navigation of Files:
 
@@ -43,3 +47,7 @@ function GeneralDay(LL, range, sensitivity)
 %image. 
 
 ```
+
+2. ViolinPlotter.m operates on text files generated from GeneralDay to plot ViolinPlots - based on  2016, Bastian Bechtold Violin.m code. 
+
+If you find any of the code useful, please cite the relevant paper Ho et. Al. 
