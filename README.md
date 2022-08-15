@@ -15,9 +15,9 @@ Navigation of Files:
 
 	First it converts the nd2 image to png image using the nd2read function: 
 
-<div style="width:50px; height:50px">
-![PNG Image of EBs](Development_Scripts/pngimage.png)
-</div>
+
+![PNG Image of EBs](Development_Scripts/pngimage.png =250x250)
+
 
 		Second it convertes the image to bw.
 
