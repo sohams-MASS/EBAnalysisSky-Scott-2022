@@ -15,7 +15,7 @@ Navigation of Files:
 
 	This is extremely dense of an image - the image can be segmented, but computation times skyrocket: 
 
-	<img src='Development_Scripts/Dense.png' width='300'>
+	<img src='Development_Scripts/Dense_2.png' width='300'><img src='Development_Scripts/Dense.png' width='300'>
 
 	Pipeline of GeneralDay.m with an ideal example image. 
 
