@@ -5,30 +5,30 @@ csvFiles = dir([pwd '/*.txt']);
 %1.83 allothers
 %1.83 for others
 L = 1;
-%matrixrad.Day1mean = nanmean(2*([readmatrix(['N' num2str(N) ' Day1.txt'])].^L)*1.83);
-%matrixrad.Day2mean = nanmean(2*([readmatrix(['N' num2str(N) ' Day2.txt'])].^L)*1.83);
+matrixrad.Day1mean = nanmean(2*([readmatrix(['N' num2str(N) ' Day1.txt'])].^L)*1.83);
+matrixrad.Day2mean = nanmean(2*([readmatrix(['N' num2str(N) ' Day2.txt'])].^L)*1.83);
 matrixrad.Day3mean = nanmean(2*([readmatrix(['N' num2str(N) ' Day3.txt'])].^L)*1.83);
-%matrixrad.Day4mean = nanmean(2*([readmatrix(['N' num2str(N) ' Day4.txt'])].^L)*1.83);
+matrixrad.Day4mean = nanmean(2*([readmatrix(['N' num2str(N) ' Day4.txt'])].^L)*1.83);
 %matrixrad.Day5mean = nanmean(2*([readmatrix(['N' num2str(N) ' Day5.txt'])].^L)*1.83);
 %matrixradd.Day0 = nanstd([readmatrix('N300 Day0.txt')']*1.83);
-%matrixrad.Day1std = nanstd(2*([readmatrix(['N' num2str(N) ' Day1.txt'])].^L)*1.83);
-%matrixrad.Day2std = nanstd(2*([readmatrix(['N' num2str(N) ' Day2.txt'])].^L)*1.83);
+matrixrad.Day1std = nanstd(2*([readmatrix(['N' num2str(N) ' Day1.txt'])].^L)*1.83);
+matrixrad.Day2std = nanstd(2*([readmatrix(['N' num2str(N) ' Day2.txt'])].^L)*1.83);
 matrixrad.Day3std = nanstd(2*([readmatrix(['N' num2str(N) ' Day3.txt'])].^L)*1.83);
-%matrixrad.Day4std = nanstd(2*([readmatrix(['N' num2str(N) ' Day4.txt'])].^L)*1.83);
+matrixrad.Day4std = nanstd(2*([readmatrix(['N' num2str(N) ' Day4.txt'])].^L)*1.83);
 %matrixrad.Day5std = nanstd(2*([readmatrix(['N' num2str(N) ' Day5.txt'])].^L)*1.83);
 filename3 = ['N' num2str(N) ' DiameterData.txt'];
 writetable(struct2table(matrixrad), filename3);
 %matrixradc.Day0 = nanmean([readmatrix('N300 Day0circle.txt')']);
-%matrixradc.Day1 = nanmean([readmatrix(['N' num2str(N) ' Day1circle.txt'])]);
-%matrixradc.Day2 = nanmean([readmatrix(['N' num2str(N) ' Day2circle.txt'])]);
+matrixradc.Day1 = nanmean([readmatrix(['N' num2str(N) ' Day1circle.txt'])]);
+matrixradc.Day2 = nanmean([readmatrix(['N' num2str(N) ' Day2circle.txt'])]);
 matrixradc.Day3 = nanmean([readmatrix(['N' num2str(N) ' Day3circle.txt'])]);
-%matrixradc.Day4 = nanmean([readmatrix(['N' num2str(N) ' Day4circle.txt'])]);
+matrixradc.Day4 = nanmean([readmatrix(['N' num2str(N) ' Day4circle.txt'])]);
 %matrixradc.Day5 = nanmean([readmatrix(['N' num2str(N) ' Day5circle.txt'])]);
 %matrixraddc.Day0 = nanstd([readmatrix('N300 Day0circle.txt')']);
-%matrixraddc.Day1 = nanstd([readmatrix(['N' num2str(N) ' Day1circle.txt'])]);
-%matrixraddc.Day2 = nanstd([readmatrix(['N' num2str(N) ' Day2circle.txt'])]);
+matrixraddc.Day1 = nanstd([readmatrix(['N' num2str(N) ' Day1circle.txt'])]);
+matrixraddc.Day2 = nanstd([readmatrix(['N' num2str(N) ' Day2circle.txt'])]);
 matrixraddc.Day3 = nanstd([readmatrix(['N' num2str(N) ' Day3circle.txt'])]);
-%matrixraddc.Day4 = nanstd([readmatrix(['N' num2str(N) ' Day4circle.txt'])]);
+matrixraddc.Day4 = nanstd([readmatrix(['N' num2str(N) ' Day4circle.txt'])]);
 %matrixraddc.Day5 = nanstd([readmatrix(['N' num2str(N) ' Day5circle.txt'])]);
 %av = mean([matrixrad.Day0 matrixrad.Day1 matrixrad.Day2 matrixrad.Day3 matrixrad.Day4 matrixrad.Day5]);
 %prnum(av);
@@ -36,16 +36,16 @@ matrixraddc.Day3 = nanstd([readmatrix(['N' num2str(N) ' Day3circle.txt'])]);
 %prnum(std);
 %Day3c = [readmatrix('N11 Day3.txt')]*1.83;
 %matrixcircle.Day0 = 2*[readmatrix('N300 Day0.txt')]*1.83;
-%matrixcircle.Day1 = 2*[readmatrix(['N' num2str(N) ' Day1.txt'])]*1.83;
-%matrixcircle.Day2 = 2*[readmatrix(['N' num2str(N) ' Day2.txt'])]*1.83;
+matrixcircle.Day1 = 2*[readmatrix(['N' num2str(N) ' Day1.txt'])]*1.83;
+matrixcircle.Day2 = 2*[readmatrix(['N' num2str(N) ' Day2.txt'])]*1.83;
 matrixcircle.Day3 = 2*[readmatrix(['N' num2str(N) ' Day3.txt'])]*1.83;
 %matrixcircle.Day3 = matrixcircle.Day3(matrixcircle.Day3 > 360);
-%matrixcircle.Day4 = 2*[readmatrix(['N' num2str(N) ' Day4.txt'])]*1.83;
+matrixcircle.Day4 = 2*[readmatrix(['N' num2str(N) ' Day4.txt'])]*1.83;
 %matrixcircle.Day5 = 2*[readmatrix(['N' num2str(N) ' Day5.txt'])]*1.83;
-%Day1c = 2*[readmatrix(['N' num2str(N) ' Day1.txt'])]*1.83;
-%Day2c = 2*[readmatrix(['N' num2str(N) ' Day2.txt'])]*1.83;
+Day1c = 2*[readmatrix(['N' num2str(N) ' Day1.txt'])]*1.83;
+Day2c = 2*[readmatrix(['N' num2str(N) ' Day2.txt'])]*1.83;
 Day3c = 2*[readmatrix(['N' num2str(N) ' Day3.txt'])]*1.83;
-%Day4c = 2*[readmatrix(['N' num2str(N) ' Day4.txt'])]*1.83;
+Day4c = 2*[readmatrix(['N' num2str(N) ' Day4.txt'])]*1.83;
 %Day5c = 2*[readmatrix(['N' num2str(N) ' Day5.txt'])]*1.83;
 % matrixcircle.Day1 = Day1c(Day1c < 250);
 % matrixcircle.Day2 = Day2c(Day2c < 500);
@@ -53,39 +53,39 @@ Day3c = 2*[readmatrix(['N' num2str(N) ' Day3.txt'])]*1.83;
 % matrixcircle.Day4 = Day4c(Day4c < 900);
 % matrixcircle.Day5 = Day5c(Day5c < 800);
 %Day0 = [readmatrix('N300 Day0circle.txt')];
-%Day1 = [readmatrix(['N' num2str(N) ' Day1circle.txt'])];
-%Day2 = [readmatrix(['N' num2str(N) ' Day2circle.txt'])];
+Day1 = [readmatrix(['N' num2str(N) ' Day1circle.txt'])];
+Day2 = [readmatrix(['N' num2str(N) ' Day2circle.txt'])];
 Day3 = [readmatrix(['N' num2str(N) ' Day3circle.txt'])];
-%Day4 = [readmatrix(['N' num2str(N) ' Day4circle.txt'])];
+Day4 = [readmatrix(['N' num2str(N) ' Day4circle.txt'])];
 %Day5 = [readmatrix(['N' num2str(N) ' Day5circle.txt'])];
 %Day0 = Day0(~isinf( Day0 ));
-%Day1 = Day1(~isinf( Day1 ));
-%Day2 = Day2(~isinf( Day2 ));
+Day1 = Day1(~isinf( Day1 ));
+Day2 = Day2(~isinf( Day2 ));
 Day3 = Day3(~isinf( Day3 ));
-%Day4 = Day4(~isinf( Day4 ));
+Day4 = Day4(~isinf( Day4 ));
 %Day5 = Day5(~isinf( Day5 ));
 
 %matrixc.Day0 = Day0(Day0 < 1);
-%matrixc.Day1 = Day1(Day1 < 1);
-%matrixc.Day2 = Day2(Day2 < 1);
+matrixc.Day1 = Day1(Day1 < 1);
+matrixc.Day2 = Day2(Day2 < 1);
 matrixc.Day3 = Day3(Day3 < 1);
-%matrixc.Day4 = Day4(Day4 < 0.97);
+matrixc.Day4 = Day4(Day4 < 1);
 %matrixc.Day5 = Day5(Day5 < 1);
 
 
 
 %matrixcd.Day0 = mean(Day0(Day0 < 1));
-%matrixcd.Day1cmean = mean(Day1(Day1 < 1));
-%matrixcd.Day2cmean = mean(Day2(Day2 < 1));
+matrixcd.Day1cmean = mean(Day1(Day1 < 1));
+matrixcd.Day2cmean = mean(Day2(Day2 < 1));
 matrixcd.Day3cmean = mean(Day3(Day3 < 1));
-%matrixcd.Day4cmean = mean(Day4(Day4 < 1));
+matrixcd.Day4cmean = mean(Day4(Day4 < 1));
 %matrixcd.Day5cmean = mean(Day5(Day5 < 1));
 
 %matrixcdd.Day0 = std(Day0(Day0 < 1));
-%matrixcd.Day1cstd = std(Day1(Day1 < 1));
-%matrixcd.Day2cstd = std(Day2(Day2 < 1));
+matrixcd.Day1cstd = std(Day1(Day1 < 1));
+matrixcd.Day2cstd = std(Day2(Day2 < 1));
 matrixcd.Day3cstd = std(Day3(Day3 < 1));
-%matrixcd.Day4cstd = std(Day4(Day4 < 1));
+matrixcd.Day4cstd = std(Day4(Day4 < 1));
 %matrixcd.Day5cstd = std(Day5(Day5 < 1));
 
 filename4 = ['N' num2str(N) ' CircularityData.txt'];
@@ -112,6 +112,7 @@ y2=400*ones(7);
 figure(1),violinplot(matrixcircle);
 set(gca, 'FontSize', 16)
 xlabel('Days', 'FontSize', 16)
+xlim([0 5]);
 ylabel('Diameter (uM)', 'FontSize', 16)
 title(['N' num2str(N) ' Diameter Sizes'], 'FontSize', 16)
 %title(['N' '2 Replicate' ' Diameter Sizes'], 'FontSize', 16)
@@ -126,12 +127,24 @@ figure(2),violinplot(matrixc);
 set(gca, 'FontSize', 16)
 xlabel('Days', 'FontSize', 16)
 ylim([0 1])
+xlim([0 5])
 ylabel('Circularity Ratio', 'FontSize', 16)
 title(['N' num2str(N) ' Circularity Ratio'], 'FontSize', 16)
 %title(['N' '2 Replicate' ' Circularity Ratio'], 'FontSize', 16)
 set(gcf, 'Position',  [100, 100, 552, 310])
 filename4 = ['N' num2str(N) ' Circularity Ratio.png'];
 saveas(gcf, filename4);
+
+% figure(3),violinplot(log([matrixc.Day1].^-1));
+% set(gca, 'FontSize', 16)
+% xlabel('Days', 'FontSize', 16)
+% ylim([0 1])
+% ylabel('Log Eccentricity Ratio', 'FontSize', 16)
+% title(['N' num2str(N) 'Log Eccentricity Ratio '], 'FontSize', 16)
+% %title(['N' '2 Replicate' ' Circularity Ratio'], 'FontSize', 16)
+% set(gcf, 'Position',  [100, 100, 552, 310])
+% filename4 = ['N' num2str(N) ' Log Eccentricity Ratio.png'];
+% saveas(gcf, filename4);
 
 %barplots
 % figure(3),histogram(matrixcircle.Day1, [0 250 300 450 650], 'Normalization', 'probability')

@@ -121,7 +121,27 @@ for i =1: len
            end
            
            %Redo Mask out found circles
-
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
             h = viscircles([centers2x2',centers2y2'],radii2y2);
            % h = viscircles(centers,radii);
             %h = viscircles(centers,radii);
@@ -224,55 +244,21 @@ totalc = [];
 N = input("What N is it?");
 D = input("What Day is it?");
 center =[];
-full_matrix = [];
 for i = 1: length(csvFiles)
 filename = strcat(csvFiles(i).name);
 matrix = readmatrix(filename);
-    try
-    %Clean Repeats
-    center = [matrix(:,1:2); center];
-    full_matrix = [full_matrix; matrix];
+try
+%Clean Repeats
 
-    %use pdist and squareform
+center = [matrix(:,1:2); center];
 
-    if mod(i, LL)==0
-        D = pdist(center);
-        %Get distance from each pair
-        D_square = squareform(D);
-        mask = (D_square < 40) & (D_square ~=0);
-        [row, col] = find(mask);
-        first_pair = [];
-        second_pair = [];
-
-        %Find all unique pairs
-        for jj = 1:length(row)
-            first_part = row(jj);
-            second_part = col(jj);
-            if (sum(second_part == first_pair)) == 0
-                second_pair = [second_pair second_part];
-                first_pair = [first_pair first_part];
-
-            end
-        end
-        mask_tree = ones(1,length(center));
-        mask_logical = logical(mask_tree);
-        %Creating unique mask
-        for jk = 1:length(second_pair)
-            mask_logical(second_pair(jk)) = false;
-        end
-
-        total = [full_matrix(mask_logical,3)' total];
-        totalc = [full_matrix(mask_logical,4)' totalc];
-
-       center =[];
-       full_matrix = [];
-    end
-    %   
-
-
-    end
+if mod(i, LL)
+%   
+    
+total = [matrix(:,3)' total];
+totalc = [matrix(:,4)' totalc];
 end
-
+end
 newfilename = ['N' num2str(N) ' Day' num2str(D) '.txt'];
 writematrix(total, newfilename);
 newfilename2 = ['N' num2str(N) ' Day' num2str(D) 'circle.txt'];
