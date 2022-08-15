@@ -15,7 +15,9 @@ Navigation of Files:
 
 	First it converts the nd2 image to png image using the nd2read function: 
 
+<div style="width:50px; height:50px">
 ![PNG Image of EBs](Development_Scripts/pngimage.png)
+</div>
 
 		Second it convertes the image to bw.
 
@@ -23,7 +25,7 @@ Navigation of Files:
 		
 		Third it segments the bw image (red circles denote found EBs using the current settings (range and sensitivity) and scan)
 		
-![Segmented BW Image](Development_Scripts/segmentedbw.png')
+![Segmented BW Image](Development_Scripts/segmentedbw.png)
 
 		Finally, it will calculate the circularity scores and the boundary color of the EBs denote the circularity score for both bw and color - heatmap is provided to the side. 
 		
