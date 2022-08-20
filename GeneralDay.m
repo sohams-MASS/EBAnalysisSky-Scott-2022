@@ -32,7 +32,7 @@ function GeneralDay(LL, range, sensitivity)
 %image. 
 
 
-clear
+
 currentdir = dir([pwd '/*.nd2']);
 currentdirc = struct2table(currentdir);
 [len,~] = size(currentdirc);
@@ -255,7 +255,7 @@ csvFiles = dir([pwd '/*.csv']);
 total = [];
 totalc = [];
 N = input("What N is it?");
-D = input("What Day is it?");
+D_ay = input("What Day is it?");
 center =[];
 full_matrix = [];
 for i = 1: length(csvFiles)
@@ -306,9 +306,9 @@ matrix = readmatrix(filename);
     end
 end
 
-newfilename = ['N' num2str(N) ' Day' num2str(D) '.txt'];
+newfilename = ['N' num2str(N) ' Day' num2str(D_ay) '.txt'];
 writematrix(total, newfilename);
-newfilename2 = ['N' num2str(N) ' Day' num2str(D) 'circle.txt'];
+newfilename2 = ['N' num2str(N) ' Day' num2str(D_ay) 'circle.txt'];
 writematrix(totalc,newfilename2);
 
 end

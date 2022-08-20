@@ -1,4 +1,4 @@
-LL=3;
+LL=1;
 csvFiles = dir([pwd '/*.csv']); 
 total = [];
 totalc = [];
